@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVoluntaryWorkTable extends Migration
+class CreateVoluntaryWorksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateVoluntaryWorkTable extends Migration
      */
     public function up()
     {
-        Schema::create('voluntary_work', function (Blueprint $table) {
+        Schema::create('voluntary_works', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->date('start_date');
@@ -23,7 +23,7 @@ class CreateVoluntaryWorkTable extends Migration
             $table->timestamps();
 
             $table->unsignedBigInteger('profile_id');
-            $table->foreign('profile_id')->references('id')->on('profile');
+            $table->foreign('profile_id')->references('id')->on('profiles');
         });
     }
 

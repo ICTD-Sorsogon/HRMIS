@@ -15,12 +15,18 @@ class CreateAppointmentsTable extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->id();
-            $table->decimal('salary_id'); //will base on salary grade, also actual salary will be base on steps gained
+            $table->integer('steps')->length(8);
             $table->date('original_appointment');
             $table->date('promotion');
             $table->enum('status', ['elected', 'co-terminus', 'permanent']);
-            $table->string('level');
+            $table->enum('level', ['K', 'T', 'A']);
             $table->timestamps();
+
+            $table->unsignedBigInteger('profile_id')->nullable()->unsigned();
+            $table->foreign('profile_id')->references('id')->on('profiles');
+
+            $table->unsignedBigInteger('salary'); //will base on salary grade, also actual salary will be base on steps gained
+            $table->foreign('salary')->references('id')->on('salary_grades');
         });
     }
 

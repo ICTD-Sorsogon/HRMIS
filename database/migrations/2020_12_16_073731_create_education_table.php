@@ -21,12 +21,12 @@ class CreateEducationTable extends Migration
             $table->date('start_date');
             $table->date('end_date');
             $table->string('attainment')->nullable();
-            $table->date('year_graduated');
+            $table->year('year_graduated');
             $table->string('awards')->nullable();
             $table->timestamps();
 
             $table->unsignedBigInteger('profile_id');
-            $table->foreign('profile_id')->references('id')->on('profile');
+            $table->foreign('profile_id')->references('id')->on('profiles');
         });
     }
 
