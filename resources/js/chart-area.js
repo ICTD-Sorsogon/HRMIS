@@ -25,7 +25,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Area Chart Example
-export const planetChartData =  {
+export const chartData =  {
   type: 'line',
   data: {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],

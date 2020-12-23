@@ -23,8 +23,10 @@ import Chart from 'chart.js';
 Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#858796';
 
-Vue.component('example-chart', require('./components/ExampleChart.vue').default);
-Vue.component('example-component', require('./components/LineChart.vue').default);
+Vue.component('line-chart', require('./components/LineChart.vue').default);
+Vue.component('pie-chart', require('./components/PieChart.vue').default);
+Vue.component('side-bar', require('./layouts/SideBar').default);
+Vue.component('nav-item', require('./components/NavItem').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

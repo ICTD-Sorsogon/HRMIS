@@ -5,8 +5,7 @@
     <div id="wrapper">
 
 	<!-- Sidebar Here -->
-	@include('layouts.sidebar')
-
+    <side-bar></side-bar>
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -141,12 +140,7 @@
                                     </div>
                                 </div>
                                 <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <example-component title="chart1"/>
-                                        {{-- <example-chart/> --}}
-                                    </div>
-                                </div>
+<line-chart/>
                             </div>
                         </div>
 
@@ -173,23 +167,7 @@
                                     </div>
                                 </div>
                                 <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        {{-- <canvas id="myPieChart"></canvas> --}}
-                                        <example-component />
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
-                                        </span>
-                                    </div>
-                                </div>
+                                <pie-chart/>
                             </div>
                         </div>
                     </div>
