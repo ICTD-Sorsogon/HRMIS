@@ -25,23 +25,19 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                Employee
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <nav-item 
-               :index="index"
-               :updateIndex="updateIndex"
-               name="Components"
-               title="Custom components"
-               :items="[
-               {name: 'Buttons', url: 'index.html'},
-               {name: 'Cards', url: 'index.html'},
-               ]"
-            ></nav-item>
+            <li class="nav-item">
+                <a class="nav-link" href="test">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Profile</span></a>
+            </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <nav-item 
+               icon="fa-wrench"
                :index="index"
                :updateIndex="updateIndex"
                name="Utilities"
@@ -107,7 +103,7 @@
 
             <!-- Sidebar Message -->
             <div class="sidebar-card">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="">
+                <img class="sidebar-card-illustration mb-2" src="/img/undraw_rocket.svg" alt="">
                 <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
                 <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
             </div>
