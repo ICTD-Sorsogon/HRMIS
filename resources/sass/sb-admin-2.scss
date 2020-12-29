@@ -4,6 +4,9 @@
 // Import Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
+// Boostrap-vue css variables
+@import "~bootstrap-vue/src/_variables.scss";
+
 // Import Custom SB Admin 2 Mixins and Components
 @import "mixins.scss";
 @import "global.scss";
@@ -18,3 +21,6 @@
 @import "login.scss";
 @import "error.scss";
 @import "footer.scss";
+
+// bootstrap-vue table styles
+@import "~bootstrap-vue/src/components/table/_table.scss"
