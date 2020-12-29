@@ -20,6 +20,11 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 import Chart from 'chart.js';
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+// Install BootstrapVue
+Vue.use(BootstrapVue)
+
 Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#858796';
 
@@ -27,6 +32,8 @@ Vue.component('line-chart', require('./components/LineChart.vue').default);
 Vue.component('pie-chart', require('./components/PieChart.vue').default);
 Vue.component('side-bar', require('./layouts/SideBar').default);
 Vue.component('nav-item', require('./components/NavItem').default);
+Vue.component('data-table', require('./components/Datatable').default);
+Vue.component('profile-accordion', require('./components/profile/ProfileAccordion').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
