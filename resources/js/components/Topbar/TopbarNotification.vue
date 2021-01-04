@@ -1,14 +1,14 @@
 <template>
     <!-- Nav Item - Alerts -->
-		<li class="nav-item dropdown no-arrow mx-1">
+		<li class="nav-item dropdown no-arrow mx-1" :class="{ show: isToggled }" @click="toggle" v-click-outside="closeDropDown">
 			<a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				data-toggle="dropdown" aria-haspopup="true" :aria-expanded="isToggled">
 				<i class="fas fa-bell fa-fw"></i>
 				<!-- Counter - Alerts -->
 				<span class="badge badge-danger badge-counter">3+</span>
 			</a>
 			<!-- Dropdown - Alerts -->
-			<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+			<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" :class="{ show: isToggled }"
 				aria-labelledby="alertsDropdown">
 				<h6 class="dropdown-header">
 					Alerts Center
@@ -35,11 +35,17 @@
 <script>
 export default {
 	name: "Notification",
-	components:{
-
+	methods: {
+		toggle() {
+			this.isToggled = !this.isToggled
+		},
+		closeDropDown() {
+			this.isToggled = false
+		}
 	},
 	data(){
 		return {
+			isToggled: false,
 			notifications:[
 				{
 					id: 1,
@@ -56,7 +62,7 @@ export default {
 					amount: "$290.29"
 				},
 				{
-					id: 2,
+					id: 3,
 					date: "December 12, 2019",
 					type: "alert",
 					msg: "We've noticed unusually high spending for your account.",

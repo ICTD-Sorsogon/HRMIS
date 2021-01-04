@@ -1,14 +1,14 @@
 <template>
     <!-- Nav Item - User Information -->
-		<li class="nav-item dropdown no-arrow">
+		<li class="nav-item dropdown no-arrow" @click="toggle" :class="{show: isToggled }" v-click-outside="closeDropDown">
 			<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-bind:key="prof.id" v-for="prof in profile">
+				data-toggle="dropdown" aria-haspopup="true" :aria-expanded="isToggled" v-bind:key="prof.id" v-for="prof in profile">
 				<span class="mr-2 d-none d-lg-inline text-gray-600 small">{{prof.user}}</span>
 				<img class="img-profile rounded-circle"
 					v-bind:src="prof.img">
 			</a>
 			<!-- Dropdown - User Information -->
-			<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+			<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" :class="{show: isToggled }"
 				aria-labelledby="userDropdown">
 				<a class="dropdown-item" href="#">
 					<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -34,11 +34,17 @@
 <script>
 export default {
 	name: "Profile",
-	components:{
-
+		methods: {
+		toggle() {
+			this.isToggled = !this.isToggled
+		},
+		closeDropDown() {
+			this.isToggled = false
+		}
 	},
 	data(){
 		return {
+			isToggled: false,
 			profile:[
 				{
 					id: 1,

@@ -1,14 +1,14 @@
 <template>
     <!-- Nav Item - Messages -->
-		<li class="nav-item dropdown no-arrow mx-1">
+		<li class="nav-item dropdown no-arrow mx-1" :class="{show: isToggled }" @click="toggle" v-click-outside="closeDropDown">
 			<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				data-toggle="dropdown" aria-haspopup="true" :aria-expanded="isToggled">
 				<i class="fas fa-envelope fa-fw"></i>
 				<!-- Counter - Messages -->
 				<span class="badge badge-danger badge-counter">7</span>
 			</a>
 			<!-- Dropdown - Messages -->
-			<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+			<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" :class="{show: isToggled }"
 				aria-labelledby="messagesDropdown">
 				<h6 class="dropdown-header">
 					Message Center
@@ -32,11 +32,17 @@
 <script>
 export default {
 	name: "Message",
-	components:{
-
+	methods:{
+		toggle() {
+			this.isToggled = !this.isToggled
+		},
+		closeDropDown() {
+			this.isToggled = false
+		}
 	},
 	data(){
 		return {
+			isToggled: false,
 			notifications:[
 				{
 					id: 1,
