@@ -39,6 +39,7 @@ class CreateProfilesTable extends Migration
             $table->string('spouse_first_name')->nullable();
             $table->string('spouse_middle_name')->nullable();
             $table->string('spouse_last_name')->nullable();
+            $table->string('spouse_suffix')->nullable();
             $table->string('spouse_occupation')->nullable();
             $table->string('spouse_employer')->nullable();
             $table->string('spouse_business_address')->nullable();
