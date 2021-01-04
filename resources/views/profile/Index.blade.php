@@ -5,7 +5,7 @@
     <div id="wrapper">
 
 	<!-- Sidebar Here -->
-    {{-- <side-bar></side-bar> --}}
+    <side-bar></side-bar>
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -119,7 +119,7 @@
                             <h6 class="m-0 font-weight-bold text-primary">Profile List</h6>
                         </div>
                         <div class="card-body">
-                            {{-- <data-table></data-table> --}}
+                            <data-table></data-table>
                         </div>
                     </div>
                     
