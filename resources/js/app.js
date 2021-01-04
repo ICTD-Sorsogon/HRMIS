@@ -28,12 +28,20 @@ Vue.use(BootstrapVue)
 Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#858796';
 
-Vue.component('line-chart', require('./components/LineChart.vue').default);
+Vue.component('example-component', require('./components/LineChart.vue').default);
+
 Vue.component('pie-chart', require('./components/PieChart.vue').default);
 Vue.component('side-bar', require('./layouts/SideBar').default);
 Vue.component('nav-item', require('./components/NavItem').default);
 Vue.component('data-table', require('./components/Datatable').default);
 Vue.component('profile-accordion', require('./components/profile/ProfileAccordion').default);
+Vue.directive('click-outside', require('./directives/click-outside').default);
+
+//Top Bar Components
+Vue.component('top-bar-message', require('./components/Topbar/TopbarMessage.vue').default);
+Vue.component('top-bar-notification', require('./components/Topbar/TopBarNotification.vue').default);
+Vue.component('top-bar-userinfo', require('./components/Topbar/TopBarUserInfo.vue').default);
+Vue.component('top-bar-search', require('./components/Topbar/TopBarSearch.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
