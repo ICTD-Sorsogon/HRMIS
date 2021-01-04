@@ -1,6 +1,6 @@
 <template>
 	<li class="nav-item">
-		<a class="nav-link" @click.stop.prevent="toggleSideBar" :class="{ collapsed:!isToggled }" data-toggle="collapse" data-target="#collapseTwo"
+		<a class="nav-link" @click.prevent="toggleSideBar" :class="{ collapsed:!isToggled }" data-toggle="collapse" data-target="#collapseTwo"
 			href="index.html"
 			:aria-expanded="isToggled" aria-controls="collapseTwo">
 			<i class="fas fa-fw" :class="this.icon"></i>
