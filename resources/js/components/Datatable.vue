@@ -173,7 +173,7 @@
       async myProvider (ctx) {
           this.isBusy = true
           try {
-            const response = await axios.get(`/profile`)
+            const response = await axios.get(`/profiles`)
             this.isBusy = false
             return response.data
           } catch (error) {
