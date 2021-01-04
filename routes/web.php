@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', 'ProfileController@profiles');
+Route::get('/profiles', 'ProfileController@profiles');
 
 Route::resource('profile', 'ProfileController');
 
