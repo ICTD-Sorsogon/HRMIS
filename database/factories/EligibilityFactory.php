@@ -12,6 +12,7 @@ $factory->define(Eligibility::class, function (Faker $faker) {
         'exam_date' => $this->faker->dateTime,
         'place' => $this->faker->address,
         'validity' => $this->faker->dateTime,
-        'number' => $this->faker->randomDigit
+        'number' => $this->faker->randomDigit,
+        'index' => $this->faker->randomDigit
     ];
 });

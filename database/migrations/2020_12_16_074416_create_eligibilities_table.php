@@ -16,11 +16,12 @@ class CreateEligibilitiesTable extends Migration
         Schema::create('eligibilities', function (Blueprint $table) {
             $table->id();
             $table->string('eligibility')->nullable();
-            $table->string('rating');
-            $table->date('exam_date');
+            $table->string('rating')->nullable();
+            $table->date('exam_date')->nullable();
             $table->string('place')->nullable();
             $table->date('validity')->nullable();
             $table->string('number')->nullable();
+            $table->integer('index')->nullable();
             $table->timestamps();
 
             $table->unsignedBigInteger('profile_id');
