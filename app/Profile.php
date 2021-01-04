@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
+    public function permanentAddress() {
+        return $this->address()->where('permanent', 1);
+    }
+
    public function position() 
    {
        return $this->hasOne(Position::class);
