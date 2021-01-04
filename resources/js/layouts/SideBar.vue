@@ -30,8 +30,8 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="test">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                <a class="nav-link" href="/profile">
+                    <i class="fas fa-fw fa-users"></i>
                     <span>Profile</span></a>
             </li>
 
@@ -39,7 +39,7 @@
             <nav-item 
                icon="fa-wrench"
                :index="index"
-               :updateIndex="updateIndex"
+               @update-index="updateIndex"
                name="Utilities"
                title="Custom Utilities"
                :items="[
