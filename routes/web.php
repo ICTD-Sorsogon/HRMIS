@@ -17,7 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function () {
+Route::get('/test', 'ProfileController@profiles');
+
+Route::resource('profile', 'ProfileController');
+
+Route::get('/dashboard', function() {
     return view('Dashboard');
 });
 
