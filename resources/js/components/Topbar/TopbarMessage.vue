@@ -48,7 +48,7 @@ export default {
 					id: 1,
 					time: "58m",
 					user: "Emily Fowler",
-					img: "img/undraw_profile_1.svg",
+					img: "/img/undraw_profile_1.svg",
 					msg: "Hi there! I am wondering if you can help me with a problem I've been having.",
 					status:"active"
 				},
@@ -56,7 +56,7 @@ export default {
 					id: 2,
 					time: "1d",
 					user: "Jae Chun",
-					img: "img/undraw_profile_2.svg",
+					img: "/img/undraw_profile_2.svg",
 					msg: "I have the photos that you ordered last month, how would you like them sent to you?",
 					status:"offline"
 				},
@@ -64,7 +64,7 @@ export default {
 					id: 3,
 					time: "2d",
 					user: "Morgan Alvarez",
-					img: "img/undraw_profile_3.svg",
+					img: "/img/undraw_profile_3.svg",
 					msg: "Last month's report looks great, I am very happy with the progress so far, keep up the good work!",
 					status:"idle"
 				},
