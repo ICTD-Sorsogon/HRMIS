@@ -1,13 +1,11 @@
 <template>
 	<li class="nav-item">
-		<a class="nav-link" v-b-toggle="'collapse-' + name" @click.prevent="toggleSideBar" :class="{ collapsed:!isToggled }" data-toggle="collapse" data-target="#collapseTwo"
-			href="index.html"
-			:aria-expanded="isToggled" aria-controls="collapseTwo">
+		<a href class="nav-link" v-b-toggle="'collapse-' + name" @click.prevent="toggleSideBar" :class="{ collapsed:!isToggled }" data-toggle="collapse">
 			<i class="fas fa-fw" :class="this.icon"></i>
 			<span>{{this.name}}</span>
 		</a>
 		<b-collapse :id="'collapse-' + name" >
-		<div id="collapseTwo" class="collapse" :class="{ show:isToggled }" aria-labelledby="headingTwo" data-parent="#accordionSidebar" >
+		<div class="collapse show">
 			<div class="bg-white py-2 collapse-inner rounded">
 				<h6 class="collapse-header">{{this.title}}:</h6>
 				<a v-for="nav in this.items" class="collapse-item" :href="nav.url">{{nav.name}}</a>
