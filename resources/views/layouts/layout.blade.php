@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
     <title>HRMIS</title>
-
+    <link rel="icon" href="{{ URL::asset('/img/favicon.ico') }}" type="image/x-icon"/>
     <!-- Custom fonts for this template-->
     {{-- <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> --}}
 
