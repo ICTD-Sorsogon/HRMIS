@@ -11,16 +11,17 @@
 	<employment-status></employment-status>
 	
 	<!-- Personal Details -->
-	<personal-details></personal-details>
+	<personal-details index="2"></personal-details>
 	
 	<!-- Work experience -->
-	<work-experience></work-experience>
+	<work-experience index="3"></work-experience>
+	<eligibilities index="4"></eligibilities>
 
 	<!-- Education -->
-	<education></education>
-	<family-background></family-background>
+	<education index="5"></education>
+	<family-background index="6"></family-background>
 	<!-- Address -->
-	<profile-address></profile-address>
+	<profile-address index="7"></profile-address>
 
 
 </div>
@@ -34,6 +35,7 @@ import FamilyBackground from './FamilyBackground.vue'
 import PersonalDetails from './PersonalDetails'
 import WorkExperience from './WorkExperience'
 import ProfileAddress from './ProfileAddress'
+import Eligibilities from './Eligibilities'
 
 	export default {
 		components: {
@@ -42,7 +44,8 @@ import ProfileAddress from './ProfileAddress'
 			Education,
 			EmploymentStatus,
 			FamilyBackground,
-			ProfileAddress
+			ProfileAddress,
+			Eligibilities
 		}
 		
 	}

@@ -1,9 +1,9 @@
 <template>
 	<div class="card shadow">
-		<a class="card-header py-3" data-toggle="collapse" @click.prevent href="#" v-b-toggle.accordion-2 >
+		<a class="card-header py-3" data-toggle="collapse" @click.prevent href="#" v-b-toggle="'accordion-' + index" >
 			<h6 class="m-0 font-weight-bold text-primary">Personal Details</h6>
 		</a>
-		<b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
+		<b-collapse :id="'accordion-' + index" accordion="my-accordion" role="tabpanel">
 		<div class="card-body">
 			<div class="form-row">
 				<!-- Form Group (first name)-->
@@ -101,6 +101,7 @@
 <script>
 	export default {
 		name: 'personal-details',
+		props: ['index'],
 		data() {
 			return {
 				lastname: null,	firstname: null, middlename: null,	suffix: null,	

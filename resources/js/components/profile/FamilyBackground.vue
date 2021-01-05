@@ -1,9 +1,9 @@
 <template>
 	<div class="card shadow">
-		<a class="card-header py-3" data-toggle="collapse" @click.prevent href="#" v-b-toggle.accordion-6 >
+		<a class="card-header py-3" data-toggle="collapse" @click.prevent href="#" v-b-toggle="'accordion-' + index" >
 			<h6 class="m-0 font-weight-bold text-primary">Family Background</h6>
 		</a>
-		<b-collapse id="accordion-6" visible accordion="my-accordion" role="tabpanel">
+		<b-collapse :id="'accordion-' + index" accordion="my-accordion" role="tabpanel">
 		<div class="card-body">
 			<h5 class="font-weight-bold">Spouse</h5>
 			<hr>
@@ -111,7 +111,7 @@
 				</div>
 				<div class="form-group col-md-2">
 					<label class="small mb-1" >Date of Birth</label>
-					<input class="form-control"  type="text"  :value="">
+					<input class="form-control"  type="text"  value="">
 				</div>
 				<div class="form-group col-md-1">
 					<label class="small mb-1" >Age</label>
@@ -125,6 +125,6 @@
 
 <script>
 	export default {
-		
+		props: ['index']	
 	}
 </script>
