@@ -23,4 +23,6 @@
 @import "footer.scss";
 
 // bootstrap-vue table styles
-@import "~bootstrap-vue/src/components/table/_table.scss"
+@import "~bootstrap-vue/src/components/table/_table.scss";
+@import "~bootstrap-vue/src/components/form-datepicker/index.scss";
+@import "~bootstrap-vue/src/components/calendar/index.scss";
