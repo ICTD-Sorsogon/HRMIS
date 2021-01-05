@@ -5,7 +5,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center pos-logo" href="#">
                 <div class="sidebar-brand-icon rotate-n-15" >
-                    <img class="logo-size" src="img/poslogo.png" alt="no-logo">
+                    <img class="logo-size" :src="imagesrc" alt="no-logo">
 
                 </div>
             </a>
@@ -247,7 +247,7 @@ import NavItem from '../components/NavItem'
             },
             updateIndex(index) {
                 this.index = index
-            }
+            },
         },
         computed: {
             activeNav() {
@@ -255,6 +255,9 @@ import NavItem from '../components/NavItem'
                 let routes = ['pop', 'profile']
                 console.log(routes.indexOf(currentURLPath))
                 return routes.indexOf(currentURLPath)
+            },
+            imagesrc(){
+                return  window.location.origin + "/img/poslogo.png" 
             }
         }
 	}
