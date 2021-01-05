@@ -17,14 +17,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', 'ProfileController@profiles');
-
-Route::resource('profile', 'ProfileController');
-
-Route::get('/dashboard', function() {
-    return view('Dashboard');
+Route::get('/login', function () {
+    return view('Login');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => ['auth']], function() {
+
+    Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+    Route::get('/test', 'ProfileController@profiles');
+
+    Route::resource('profile', 'ProfileController');
+
+    Route::get('/dashboard', function() {
+        return view('Dashboard');
+    });
+
+
+    // Route::get('/home', 'HomeController@index')->name('home');
+});
