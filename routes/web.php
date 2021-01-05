@@ -18,7 +18,13 @@ Route::get('/', function () {
 });
 
 Route::get('/login', function () {
-    return view('Login');
+    return view('auth.login');
+});
+Route::get('/register', function () {
+    return view('auth.register');
+});
+Route::get('/password/reset', function () {
+    return view('auth.passwords.email');
 });
 
 Auth::routes();
