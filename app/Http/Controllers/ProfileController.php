@@ -82,4 +82,11 @@ class ProfileController extends Controller
     {
         //
     }
+
+    public function getDetails(Request $request){
+
+       return Profile::find($request->id);
+
+    }
+
 }
