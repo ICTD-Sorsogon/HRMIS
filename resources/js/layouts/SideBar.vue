@@ -14,10 +14,10 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item" :class="{active: activeNav == 0}">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>POP</span></a>
             </li>
 
             <!-- Divider -->
@@ -29,7 +29,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item" :class="{active: activeNav == 1}">
                 <a class="nav-link" href="/profile">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Profile</span></a>
@@ -130,6 +130,14 @@ import NavItem from '../components/NavItem'
             },
             updateIndex(index) {
                 this.index = index
+            }
+        },
+        computed: {
+            activeNav() {
+                let currentURLPath = window.location.pathname.match(/(?<=^\/)\w+/)?.toString()
+                let routes = ['pop', 'profile']
+                console.log(routes.indexOf(currentURLPath))
+                return routes.indexOf(currentURLPath)
             }
         }
 	}
