@@ -18,16 +18,16 @@
     <div class="container">
 
         <!-- Outer Row -->
-        <div class="row justify-content-center" >
+        <div class="row justify-content-center">
 
-            <div class="col-xl-10 col-lg-12 col-md-9" style="margin-top:10vh">
+            <div class="col-xl-10 col-lg-12 col-md-9" style="margin-top:15vh">
 
-                <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card o-hidden border-0 shadow-lg my-5" >
                     <div class="card-body p-0" >
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-5 offset-lg-1 d-none d-lg-block "> 
-                                <img src="{{ asset('img/login.png') }}" alt="" style="margin-top:40px"> 
+                                <img src="{{ asset('img/poslogo.png') }}" alt="" style="margin-top:40px; width:360px; height:360px"> 
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
@@ -39,12 +39,11 @@
                                         <div class="form-group row">
                                             <input id="email" 
                                                 type="email" 
-                                                class="form-control form-control-user"
-                                                @error('email') is-invalid @enderror 
+                                                class="form-control form-control-user @error('email') is-invalid @enderror"
                                                 name="email" value="{{ old('email') }}" 
                                                 required 
                                                 autocomplete="email" 
-                                                autofocus> 
+                                                autofocus placeholder="Email Address"> 
                                             @error('email')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -52,7 +51,7 @@
                                             @enderror
                                         </div>
                                         <div class="form-group row">
-                                            <input id="password" type="password" class="form-control form-control-user @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                            <input id="password" type="password" class="form-control form-control-user @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
 
                                             @error('password')
                                                 <span class="invalid-feedback" role="alert">
@@ -81,10 +80,10 @@
                                         <hr>
                                     </form>
                                     <div class="text-center">
-                                        <a class="small" href="forgot">Forgot Password?</a>
+                                        <a class="small" href="/password/reset">Forgot Password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
+                                        <a class="small" href="/register">Create an Account!</a>
                                     </div>
                                 </div>
                             </div>
