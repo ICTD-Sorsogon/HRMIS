@@ -3,7 +3,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" :class="{ toggled:this.isToggled }" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center pos-logo" href="/">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center pos-logo" href="/dashboard">
                 <div class="sidebar-brand-icon">
                     <img class="img-fluid" :src="imagesrc" alt="no-logo">
                 </div>
