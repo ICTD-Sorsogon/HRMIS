@@ -1,9 +1,12 @@
 <template>
 	<div class="card shadow">
-		<a class="card-header py-3" data-toggle="collapse" @click.prevent href="#" v-b-toggle="'accordion-' + index" >
+		<div class="card-header sticky py-2 d-flex justify-content-between align-items-center">
 			<h6 class="m-0 font-weight-bold text-primary">Eligibilities</h6>
-		</a>
-		<b-collapse :id="'accordion-' + index" visible accordion="my-accordion" role="tabpanel">
+			<div>
+				<span class="btn btn-success btn-sm">Save</span>
+				<span class="btn btn-primary btn-sm">Add</span>
+			</div>
+		</div>
 		<div class="card-body">
 			<div class="form-row">
 				<!-- Form Group (first name)-->
@@ -40,7 +43,6 @@
 				</div>
 			</div>
 		</div>
-		</b-collapse>
 	</div>
 </template>
 
