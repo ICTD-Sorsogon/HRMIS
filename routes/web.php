@@ -24,6 +24,7 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('auth.register');
 });
+
 Route::get('/password/reset', function () {
     return view('auth.passwords.email');
 });

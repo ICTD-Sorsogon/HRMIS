@@ -1,9 +1,8 @@
 <template>
 	<div class="card shadow">
-		<a class="card-header py-3" data-toggle="collapse" @click.prevent href="#" v-b-toggle="'accordion-' + index" >
+		<div class="card-header py-3" >
 			<h6 class="m-0 font-weight-bold text-primary">Family Background</h6>
-		</a>
-		<b-collapse :id="'accordion-' + index" accordion="my-accordion" role="tabpanel">
+		</div>
 		<div class="card-body">
 			<h5 class="font-weight-bold">Spouse</h5>
 			<hr>
@@ -119,7 +118,6 @@
 				</div>
 			</div>
 		</div>
-		</b-collapse>
 	</div>	
 </template>
 

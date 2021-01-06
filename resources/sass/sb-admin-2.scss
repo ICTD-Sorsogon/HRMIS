@@ -26,3 +26,14 @@
 @import "~bootstrap-vue/src/components/table/_table.scss";
 @import "~bootstrap-vue/src/components/form-datepicker/index.scss";
 @import "~bootstrap-vue/src/components/calendar/index.scss";
+
+
+.overflow-visible {
+	overflow: visible !important;
+}
+
+.card-header.sticky {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}

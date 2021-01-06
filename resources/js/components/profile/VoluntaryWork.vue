@@ -1,7 +1,7 @@
 <template>
 	<div class="card shadow">
 		<div class="card-header sticky py-2 d-flex justify-content-between align-items-center">
-			<h6 class="m-0 font-weight-bold text-primary">Eligibilities</h6>
+			<h6 class="m-0 font-weight-bold text-primary">Voluntary Works</h6>
 			<div>
 				<span class="btn btn-success btn-sm">Save</span>
 				<span class="btn btn-primary btn-sm">Add</span>
@@ -11,35 +11,31 @@
 			<div class="form-row">
 				<!-- Form Group (first name)-->
 				<div class="form-group col-md-3">
-					<label class="small mb-1" for="inputFirstName">Eligibility</label>
+					<label class="small mb-1" for="inputFirstName">Name</label>
 					<input class="form-control" id="inputFirstName" type="text"  :value="firstname">
 				</div>
 				<!-- Form Group (last name)-->
-				<div class="form-group col-md-1">
-					<label class="small mb-1" for="inputLastName">Rating</label>
+				<div class="form-group col-md-3">
+					<label class="small mb-1" for="inputLastName">Address</label>
 					<input class="form-control" id="inputLastName" type="text"  :value="lastname">
 				</div>
 				<div class="form-group col-md-2">
-					<label class="small mb-1" for="inputMiddleName">Date</label>
+					<label class="small mb-1" for="inputMiddleName">From</label>
 					<b-form-datepicker
 						id="datepicker-dateformat1"
 						:date-format-options="{ year: '2-digit', month: '2-digit', day: '2-digit' }" placeholder="Pick Date"
 					></b-form-datepicker>
 				</div>
 				<div class="form-group col-md-2">
-					<label class="small mb-1" for="inputLastName">Place of Exam</label>
-					<input class="form-control" id="inputLastName" type="text"  :value="suffix">
-				</div>
-				<div class="form-group col-md-2">
-					<label class="small mb-1" for="inputLastName">Number</label>
-					<input class="form-control" id="inputLastName" type="text"  :value="suffix">
-				</div>
-				<div class="form-group col-md-2">
-					<label class="small mb-1" for="inputMiddleName">Validity</label>
+					<label class="small mb-1" for="inputMiddleName">To</label>
 					<b-form-datepicker
 						id="datepicker-dateformat1"
 						:date-format-options="{ year: '2-digit', month: '2-digit', day: '2-digit' }" placeholder="Pick Date"
 					></b-form-datepicker>
+				</div>
+				<div class="form-group col-md-2">
+					<label class="small mb-1" for="inputLastName">Position</label>
+					<input class="form-control" id="inputLastName" type="text"  :value="suffix">
 				</div>
 			</div>
 		</div>
@@ -64,5 +60,4 @@
 </script>
 
 <style lang="scss" scoped>
-
 </style>

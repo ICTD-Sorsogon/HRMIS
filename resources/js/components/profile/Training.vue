@@ -1,13 +1,12 @@
 <template>
 	<div class="card shadow">
-		<div class="card-header sticky py-2 d-flex justify-content-between align-items-center">
-			<h6 class="m-0 font-weight-bold text-primary">Eligibilities</h6>
-			<div>
-				<span class="btn btn-success btn-sm">Save</span>
-				<span class="btn btn-primary btn-sm">Add</span>
-			</div>
+		<div class="card-header py-3">
+			<h6 class="m-0 font-weight-bold text-primary">Training Program Attended</h6>
 		</div>
 		<div class="card-body">
+			<div class="form-row flex-row-reverse">
+				<span class="btn btn-primary btn-sm">Add</span>
+			</div>
 			<div class="form-row">
 				<!-- Form Group (first name)-->
 				<div class="form-group col-md-3">

@@ -6,22 +6,40 @@
 	<div class="d-sm-flex align-items-center justify-content-between mb-4">
 		<h1 class="h3 mb-0 text-gray-800">Profile | Edit</h1>
 	</div>
+	<b-tabs content-class="mt-3">
+		<b-tab title="Personal Details" active>	
+			<!-- Employment Status -->
+			<employment-status></employment-status>
+			<!-- Personal Details -->
+			<personal-details index="2"></personal-details>
+				<!-- Address -->
+			<profile-address index="7"></profile-address>
+		</b-tab>
+		<b-tab title="Family Background">
+			<family-background index="6"></family-background>
+		</b-tab>
+		<b-tab title="Work Experience">	
+			<!-- Work experience -->
+			<work-experience index="3"></work-experience>
+		</b-tab>
+		<b-tab title="Eligibility">
+			<eligibilities index="4"></eligibilities>
+		</b-tab>
+		<b-tab title="Education">
+			<!-- Education -->
+			<education index="5"></education>
+		</b-tab>
+		<b-tab title="Voluntary Work">
+			<!-- Education -->
+			<voluntary-work index="5"></voluntary-work>
+		</b-tab>
+		<b-tab title="Training">
+			<!-- Education -->
+			<training index="5"></training>
+		</b-tab>
+	</b-tabs>
 
-	<!-- Employment Status -->
-	<employment-status></employment-status>
 	
-	<!-- Personal Details -->
-	<personal-details index="2"></personal-details>
-	
-	<!-- Work experience -->
-	<work-experience index="3"></work-experience>
-	<eligibilities index="4"></eligibilities>
-
-	<!-- Education -->
-	<education index="5"></education>
-	<family-background index="6"></family-background>
-	<!-- Address -->
-	<profile-address index="7"></profile-address>
 
 
 </div>
@@ -29,24 +47,9 @@
 </template>
 
 <script>
-import Education from './Education'
-import EmploymentStatus from './EmploymentStatus'
-import FamilyBackground from './FamilyBackground.vue'
-import PersonalDetails from './PersonalDetails'
-import WorkExperience from './WorkExperience'
-import ProfileAddress from './ProfileAddress'
-import Eligibilities from './Eligibilities'
+import * as ProfileComponents from './index'
 
 	export default {
-		components: {
-			PersonalDetails,
-			WorkExperience,
-			Education,
-			EmploymentStatus,
-			FamilyBackground,
-			ProfileAddress,
-			Eligibilities
-		}
-		
+		components: {...ProfileComponents }
 	}
 </script>
