@@ -98,30 +98,14 @@
 </template>
 
 <script>
+import { PersonalDetails } from './data/defaultValues.js'
+
 	export default {
 		name: 'personal-details',
 		props: ['index'],
 		data() {
 			return {
-				first_name: null, 
-				last_name: null,
-				middle_name: null,
-				suffix: null,
-				age: null,
-				place_of_birth: null, 
-				citizenship: null, 
-				civil_status: null, 
-				gender: null,
-				sss: null,
-				pag_ibig: null,
-				gsis: null,
-				philhealth: null,
-				blood_type: null,
-				height: null,
-				weight: null,
-				mobile: null,
-				telephone: null,
-				email: null, 
+				...PersonalDetails
 			}
 
 		}, 
