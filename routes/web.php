@@ -24,6 +24,7 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('auth.register');
 });
+
 Route::get('/password/reset', function () {
     return view('auth.passwords.email');
 });
@@ -47,9 +48,9 @@ Route::group(['middleware' => ['auth']], function() {
 
     Route::resource('profile', 'ProfileController');
 
-    Route::get('/dashboard', function() {
-        return view('Dashboard');
-    });
+    // Route::get('/dashboard', function() {
+    //     return view('Dashboard');
+    // });
 
 
     // Route::get('/home', 'HomeController@index')->name('home');
