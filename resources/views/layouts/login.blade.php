@@ -10,16 +10,11 @@
 
     <title>HRMIS</title>
     <link rel="icon" href="{{ URL::asset('/img/favicon.ico') }}" type="image/x-icon"/>
-    <!-- Custom fonts for this template-->
-    {{-- <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> --}}
-
-    <!-- Custom styles for this template-->
-	{{-- <link href="css/sb-admin-2.min.css" rel="stylesheet"> --}}
 	<link href="/css/app.css" rel="stylesheet">
 
 </head>
 
-<body id="page-top">
+<body class="bg-gradient-primary">
 	@yield('content')
 </body>
 </html>
