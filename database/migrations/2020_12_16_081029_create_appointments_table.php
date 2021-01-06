@@ -22,11 +22,8 @@ class CreateAppointmentsTable extends Migration
             $table->enum('level', ['K', 'T', 'A']);
             $table->timestamps();
 
-            $table->unsignedBigInteger('profile_id')->nullable()->unsigned();
-            $table->foreign('profile_id')->references('id')->on('profiles');
-
-            $table->unsignedBigInteger('salary'); //will base on salary grade, also actual salary will be base on steps gained
-            $table->foreign('salary')->references('id')->on('salary_grades');
+            $table->foreignId('profile_id')->constrained('profiles');
+            $table->foreignId('position_id')->constrained('positions');
         });
     }
 
@@ -37,6 +34,8 @@ class CreateAppointmentsTable extends Migration
      */
     public function down()
     {
+        $table->dropForeign(['profile_id']);
+        $table->dropForeign(['position_id']);
         Schema::dropIfExists('appointments');
     }
 }

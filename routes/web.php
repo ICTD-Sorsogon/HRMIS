@@ -26,6 +26,7 @@ Route::get('/register', function () {
 });
 Route::get('/password/reset', function () {
     return view('auth.passwords.email');
+});
 
 Route::get('/profiles', 'ProfileController@profiles');
 

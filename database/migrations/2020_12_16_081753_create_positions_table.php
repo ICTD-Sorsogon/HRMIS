@@ -22,6 +22,8 @@ class CreatePositionsTable extends Migration
             $table->string('office');
             $table->string('office_address');
             $table->timestamps();
+            $table->foreignId('salary_id')->constrained('salary_grades');
+            $table->foreignId('appointment_id')->constrained('appointments');
         });
     }
 
@@ -32,6 +34,8 @@ class CreatePositionsTable extends Migration
      */
     public function down()
     {
+        $table->dropForeign(['salary_id']);
+        $table->dropForeign(['appointment_id']);
         Schema::dropIfExists('positions');
     }
 }
