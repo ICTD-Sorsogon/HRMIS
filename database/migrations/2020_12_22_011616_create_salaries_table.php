@@ -16,6 +16,7 @@ class CreateSalariesTable extends Migration
         Schema::create('salaries', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreignId('salary_id')->constrained('salary_grades');
         });
     }
 
@@ -26,6 +27,7 @@ class CreateSalariesTable extends Migration
      */
     public function down()
     {
+        $table->dropForeign(['salary_id']);
         Schema::dropIfExists('salary');
     }
 }

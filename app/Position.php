@@ -10,4 +10,9 @@ class Position extends Model
     {
         return $this->hasOne(Appointment::class);
     }
+
+    public function salary()
+    {
+        return $this->hasOne(Salary::class);
+    }
 }
