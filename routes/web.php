@@ -26,6 +26,7 @@ Route::get('/register', function () {
 });
 Route::get('/password/reset', function () {
     return view('auth.passwords.email');
+});
 
 Route::get('/profiles', 'ProfileController@profiles');
 
@@ -50,6 +51,4 @@ Route::group(['middleware' => ['auth']], function() {
         return view('Dashboard');
     });
 
-
-    // Route::get('/home', 'HomeController@index')->name('home');
 });
