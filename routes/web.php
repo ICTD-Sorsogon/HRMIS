@@ -33,25 +33,16 @@ Route::get('/profiles', 'ProfileController@profiles');
 
 Route::resource('profile', 'ProfileController');
 
-Route::get('/dashboard', function() {
-    return view('Dashboard');
-
-});
-
 Auth::routes();
 
 Route::group(['middleware' => ['auth']], function() {
+    Route::get('/dashboard', 'DashboardController@getUser')->name('dashboard');
+
+    Route::get('/profile/{id}/details', 'ProfileController@getDetails')->name('profile-details');
 
     Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
     Route::get('/test', 'ProfileController@profiles');
 
     Route::resource('profile', 'ProfileController');
-
-    // Route::get('/dashboard', function() {
-    //     return view('Dashboard');
-    // });
-
-
-    // Route::get('/home', 'HomeController@index')->name('home');
 });

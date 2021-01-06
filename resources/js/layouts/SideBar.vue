@@ -3,9 +3,9 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" :class="{ toggled:this.isToggled }" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
                 <div class="sidebar-brand-icon">
-                    <img class="img-fluid" src="/img/poslogo.png" alt="no-logo">
+                    <img class="img-fluid" :src="imagesrc" alt="no-logo">
                 </div>
             </a>
 
@@ -121,7 +121,7 @@ import NavItem from '../components/NavItem'
             },
             updateIndex(index) {
                 this.index = index
-            }
+            },
         },
         computed: {
             activeNav() {
@@ -129,6 +129,9 @@ import NavItem from '../components/NavItem'
                 let routes = ['pop', 'profile']
                 console.log(routes.indexOf(currentURLPath))
                 return routes.indexOf(currentURLPath)
+            },
+            imagesrc(){
+                return  window.location.origin + "/img/poslogo.png" 
             }
         }
 	}

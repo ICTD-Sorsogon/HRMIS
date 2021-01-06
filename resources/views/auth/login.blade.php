@@ -12,9 +12,9 @@
                 <div class="card o-hidden border-0 shadow-lg my-5" >
                     <div class="card-body p-0" >
                         <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-5 offset-lg-1 d-none d-lg-block "> 
-                                <img src="{{ asset('img/poslogo.png') }}" alt="" style="margin-top:40px; width:360px; height:360px"> 
+                        <div class="row justify-content-between">
+                            <div class="col-lg-5 d-none d-lg-block "> 
+                                <img src="{{ asset('img/poslogo.png') }}" alt="" style="margin-left:50px;margin-top:40px; width:360px;"> 
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
