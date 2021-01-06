@@ -49,7 +49,7 @@ export default {
 				{
 					id: 1,
 					user: "Douglas McGee",
-					img: "img/undraw_profile.svg",
+					img: "/img/undraw_profile.svg",
 				}
 			]
 		}

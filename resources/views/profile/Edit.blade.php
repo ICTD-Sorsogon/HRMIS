@@ -5,7 +5,7 @@
     <div id="wrapper">
 
 	<!-- Sidebar Here -->
-    {{-- <side-bar></side-bar> --}}
+    <side-bar></side-bar>
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
