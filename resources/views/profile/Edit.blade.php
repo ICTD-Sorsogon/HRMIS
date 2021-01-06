@@ -7,7 +7,7 @@
 	<!-- Sidebar Here -->
     <side-bar></side-bar>
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content-wrapper" class="d-flex flex-column overflow-visible">
 
             <!-- Main Content -->
             <div id="content">
