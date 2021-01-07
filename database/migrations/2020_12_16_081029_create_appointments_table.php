@@ -21,12 +21,7 @@ class CreateAppointmentsTable extends Migration
             $table->enum('status', ['elected', 'co-terminus', 'permanent']);
             $table->enum('level', ['K', 'T', 'A']);
             $table->timestamps();
-
-            $table->unsignedBigInteger('profile_id')->nullable()->unsigned();
-            $table->foreign('profile_id')->references('id')->on('profiles');
-
-            $table->unsignedBigInteger('salary'); //will base on salary grade, also actual salary will be base on steps gained
-            $table->foreign('salary')->references('id')->on('salary_grades');
+            $table->foreignId('profile_id')->constrained('profiles');
         });
     }
 

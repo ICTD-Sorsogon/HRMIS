@@ -10,7 +10,7 @@ class Profile extends Model
         return $this->address()->where('permanent', 1);
     }
 
-   public function position() 
+   public function position()
    {
        return $this->hasOne(Position::class);
    }
@@ -44,4 +44,9 @@ class Profile extends Model
    {
        return $this->hasMany(Eligibility::class);
    }
+
+   public function appointment()
+    {
+        return $this->hasOne(Appointment::class);
+    }
 }
