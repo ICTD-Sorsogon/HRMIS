@@ -1,12 +1,12 @@
 export const PersonalDetails = {
-	first_name: null, 
+	first_name: null,
 	last_name: null,
 	middle_name: null,
 	suffix: null,
 	age: null,
-	place_of_birth: null, 
-	citizenship: null, 
-	civil_status: null, 
+	place_of_birth: null,
+	citizenship: null,
+	civil_status: null,
 	gender: null,
 	sss: null,
 	pag_ibig: null,
@@ -17,5 +17,16 @@ export const PersonalDetails = {
 	weight: null,
 	mobile: null,
 	telephone: null,
-	email: null, 
+	email: null,
+}
+
+export const Education = {
+    level: null,
+    name: null,
+    track: null,
+    start_date: null,
+    end_date: null,
+    attainment: null,
+    year_graduated: null,
+    awards: null,
 }
