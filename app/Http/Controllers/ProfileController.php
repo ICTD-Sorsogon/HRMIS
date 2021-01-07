@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Education;
 use App\Profile;
 use Illuminate\Http\Request;
 
@@ -87,6 +88,11 @@ class ProfileController extends Controller
 
        return Profile::find($request->id);
 
+    }
+
+    public function getEducation(Request $request)
+    {
+        return Education::where('profile_id', '=', $request->id)->get();
     }
 
 }
