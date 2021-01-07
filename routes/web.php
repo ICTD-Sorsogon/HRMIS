@@ -40,6 +40,8 @@ Route::group(['middleware' => ['auth']], function() {
 
     Route::get('/profile/{id}/details', 'ProfileController@getDetails')->name('profile-details');
 
+    Route::get('/profile/{id}/education', 'ProfileController@getEducation')->name('education');
+
     Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
     Route::get('/test', 'ProfileController@profiles');
