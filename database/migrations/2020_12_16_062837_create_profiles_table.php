@@ -22,13 +22,14 @@ class CreateProfilesTable extends Migration
             $table->decimal('height');
             $table->string('suffix')->nullable();
             $table->enum('gender', ['male', 'female']);
+            $table->integer('age');
             $table->enum('blood_type', ['A','AB', 'B', 'O']);
             $table->date('dob');
             $table->string('place_of_birth');
             $table->string('tin',15);
             $table->string('sss', 15);
             $table->string('philhealth', 15);
-            $table->string('pag-ibig', 15);
+            $table->string('pag_ibig', 15);
             $table->string('gsis', 15);
             $table->string('mobile',15);
             $table->string('telephone',15);

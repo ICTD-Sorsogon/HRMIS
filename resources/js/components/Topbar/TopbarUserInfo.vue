@@ -3,7 +3,7 @@
 		<li class="nav-item dropdown no-arrow" @click="toggle" :class="{show: isToggled }" v-click-outside="closeDropDown">
 			<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
 				data-toggle="dropdown" aria-haspopup="true" :aria-expanded="isToggled" v-bind:key="prof.id" v-for="prof in profile">
-				<span class="mr-2 d-none d-lg-inline text-gray-600 small">{{prof.user}}</span>
+				<span class="mr-2 d-none d-lg-inline text-gray-600 small">{{currentUser.name}}</span>
 				<img class="img-profile rounded-circle"
 					v-bind:src="prof.img">
 			</a>
@@ -33,6 +33,7 @@
 
 <script>
 export default {
+	props: ['currentUser'],
 	name: "Profile",
 		methods: {
 		toggle() {
