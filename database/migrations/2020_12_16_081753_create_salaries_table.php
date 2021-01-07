@@ -27,7 +27,6 @@ class CreateSalariesTable extends Migration
      */
     public function down()
     {
-        $table->dropForeign(['salary_id']);
         Schema::dropIfExists('salary');
     }
 }

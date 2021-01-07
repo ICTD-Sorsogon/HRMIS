@@ -21,9 +21,7 @@ class CreateAppointmentsTable extends Migration
             $table->enum('status', ['elected', 'co-terminus', 'permanent']);
             $table->enum('level', ['K', 'T', 'A']);
             $table->timestamps();
-
             $table->foreignId('profile_id')->constrained('profiles');
-            $table->foreignId('position_id')->constrained('positions');
         });
     }
 
@@ -34,8 +32,6 @@ class CreateAppointmentsTable extends Migration
      */
     public function down()
     {
-        $table->dropForeign(['profile_id']);
-        $table->dropForeign(['position_id']);
         Schema::dropIfExists('appointments');
     }
 }
